@@ -1,0 +1,127 @@
+html {
+  font-family: 'Merriweather', serif;
+  background: #FAFAFA;
+  color: #645953;
+}
+
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  color: #154B78;
+}
+
+form {
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-row-gap: 10px;
+  background: #EBE3D6;
+  padding: 5px;
+  max-width: 500px;
+  margin: 1rem auto;
+}
+
+label {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+}
+
+label p {
+  margin: 3px 1rem 0 0;
+  padding: 0;
+}
+
+input[type=text] {
+  width: 100%;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+}
+
+input[type=number] {
+  width: 100%;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+}
+
+input[type=submit] {
+  height: 2rem;
+  width: 8rem;
+  margin: 0 auto;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+  background: white;
+}
+
+main {
+  max-width: 900px;
+  margin: auto auto;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+}
+
+header {
+  margin: auto auto;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #177EAB;
+}
+
+a:visited {
+  color: #177EAB;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#pages {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#pages a {
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.thinkful-footer {
+  max-width: 320px;
+  font-size: 9px;
+  opacity: 0.9;
+  margin: auto auto;
+  padding: 1px;
+}
+
+.thinkful-footer ul {
+  margin: auto auto;
+  text-align: center;
+  padding: 0;
+}
+
+.thinkful-footer li {
+  list-style: none;
+  display: inline;
+}
+
+.thinkful-footer li:last-of-type::before {
+  content: ' | ';
+  padding-left: 4px;
+  padding-right: 4px;
+}

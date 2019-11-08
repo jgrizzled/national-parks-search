@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>National Parks Search</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <h1>National Parks Search</h1>
+  <form>
+    <label>
+      <p>Query:</p>
+      <input type="text" id="query">
+    </label>
+    <label>
+      <p>States:</p>
+      <select class="select2" id="states" multiple="multiple" style="width: 100%"></select>
+    </label>
+    <label>
+      <p>Results:</p>
+      <input type="number" min="1" max="100" id="limit" value="10" required>
+    </label>
+    <input type="submit" value="Search">
+  </form>
+  <main>
+    <header>Search National Park Service land</header>
+    <ol>
+      <!-- search results -->
+    </ol>
+    <div id="pages">
+      <a href="#" id="prev">&lt; Prev</a><a href="#" id="next">Next &gt;</a>
+    </div>
+  </main>
+  <footer class="thinkful-footer">
+    <ul>
+      <li><a href="https://thinkful.com" target="_blank">Thinkful</a> assignment - Module 10 Checkpoint 7</li>
+      <br>
+      <li><a href="https://github.com/jgrizzled/portfolio">Justin Greene</a></li>
+      <li><a href="https://github.com/jgrizzled/national-parks-search">Source</a></li>
+    </ul>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js" integrity="sha384-KjsJwMB03GQH/gvsBTpEONeOUBnRY/Dpp+iDzeS4BMQi2Ayl2emKLGuLr3gChQhv" crossorigin="anonymous"></script>
+  <script src="states_list.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
