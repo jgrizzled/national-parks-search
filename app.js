@@ -6,6 +6,7 @@ const MAX_LIMIT = 100;
 
 const SEARCH_RESULT_LIST = $('ol');
 const SEARCH_HEADER = $('header');
+const FORM = $('form');
 const NEXT = $('#next');
 const PREV = $('#prev');
 
@@ -104,9 +105,11 @@ function displayResults(results, start, total) {
 
 //process submitted form input
 async function handleSubmit(event) {
-  event.preventDefault();
   NEXT.off('click');
   PREV.off('click');
+  NEXT.hide();
+  PREV.hide();
+  SEARCH_RESULT_LIST.empty();
   //clean input
   const q = $('#query').val();
   const alphanumericQ = q.replace(/[^0-9a-zA-Z ]/g, '');
@@ -121,12 +124,13 @@ async function handleSubmit(event) {
   else
     SEARCH_HEADER.text('Please specify a search string and/or states');
 
-  $('form').on('submit', handleSubmit);
+  FORM.one('submit', handleSubmit);
 }
 
 $(() => {
   $('.select2').select2({data: STATES_LIST});
-  $('form').one('submit', handleSubmit);
+  FORM.on('submit', event => event.preventDefault());
+  FORM.one('submit', handleSubmit);
   PREV.hide();
   NEXT.hide();
 });
